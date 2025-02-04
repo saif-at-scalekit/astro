@@ -8,7 +8,6 @@ import { starlightConfig } from './src/starlight.config.js';
 // https://astro.build/config
 export default defineConfig({
   integrations: [starlight(starlightConfig), react()],
-
   vite: {
     plugins: [tailwindcss()],
   },

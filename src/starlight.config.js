@@ -1,8 +1,21 @@
+import starlightOpenAPI, { openAPISidebarGroups } from 'starlight-openapi';
 export const starlightConfig = {
   title: 'My Docs',
   customCss: [
     '@fontsource-variable/plus-jakarta-sans',
     './src/styles/custom.css',
+  ],
+  plugins: [
+    // Generate the OpenAPI documentation pages.
+    starlightOpenAPI([
+      {
+        base: 'api',
+        label: 'My API',
+        schema: 'src/schema/scalekit.swagger.json',
+        sidebarMethodBadges: true,
+        collapsed: false,
+      },
+    ]),
   ],
   sidebar: [
     {
@@ -16,5 +29,6 @@ export const starlightConfig = {
       label: 'Reference',
       autogenerate: { directory: 'reference' },
     },
+    ...openAPISidebarGroups,
   ],
 };
