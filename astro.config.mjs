@@ -44,8 +44,8 @@ export default defineConfig({
       },
       customCss: [
         '@fontsource-variable/inter',
-        '@fontsource-variable/plus-jakarta-sans',
-        '@fontsource-variable/space-grotesk',
+        '@fontsource-variable/ibm-plex-sans',
+        '@fontsource/ibm-plex-mono',
         './src/styles/theme-priority.css',
         // './src/styles/tailwind.css',
         './src/styles/custom.css',
@@ -53,7 +53,7 @@ export default defineConfig({
       plugins: [
         // starlightLinksValidator(), // TODO: Uncomment this when you go live
         // starlightLlmsTxt(), // TODO: Uncomment this when you go live
-        starlightThemeRapide(),
+        // starlightThemeRapide(), // TODO:this is for own design
         starlightImageZoom({
           showCaptions: true,
         }),
